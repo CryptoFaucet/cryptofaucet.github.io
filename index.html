@@ -77,11 +77,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
   }
   .card a {
     display: block;
     width: 100%;
-    background: linear-gradient(to bottom, #34c759, #2db84c);
+    background: linear-gradient(to bottom, #000, #222);
     color: white;
     text-decoration: none;
     padding: 10px 0;
@@ -93,13 +96,14 @@
     transition: background 0.3s, transform 0.2s;
   }
   .card a:hover {
-    background: linear-gradient(to bottom, #28a745, #24963d);
+    background: linear-gradient(to bottom, #111, #333);
     transform: scale(1.05);
   }
-  .card p {
+  .earn-range {
     font-weight: bold;
     margin: 8px 0;
-    color: #222;
+    color: #34c759;
+    text-shadow: 0 0 5px rgba(52, 199, 89, 0.5);
   }
   .card ul {
     list-style: none;
@@ -118,17 +122,17 @@
   }
   .wallet a {
     display: inline-block;
-    background: linear-gradient(to bottom, #34c759, #2db84c);
+    background: linear-gradient(to bottom, #000, #222);
     color: white;
     text-decoration: none;
     padding: 8px 14px;
     border-radius: 6px;
     font-size: 0.9rem;
     margin-top: 10px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   }
   .wallet a:hover {
-    background: linear-gradient(to bottom, #28a745, #24963d);
+    background: linear-gradient(to bottom, #111, #333);
   }
   footer {
     font-size: 0.85rem;
@@ -136,6 +140,12 @@
     padding: 20px;
     background: #f2f2f2;
     border-top: 1px solid #ddd;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
 </head>
@@ -149,76 +159,84 @@
 </section>
 <p class="highlight-text">To boost your earnings, sign up for all the faucets below, visit them every hour, and bookmark them for quick access.</p>
 <div class="container">
-  <div class="card">
+  <div class="card" style="animation-delay: 0s">
     <a href="https://freebitco.in/?r=3776968" target="_blank">FreeBitco.in</a>
-    <p>Earn up to 0.003 BTC every hour</p>
+    <div class="earn-range">$0.20 – $200/hr</div>
     <ul>
-      <li>📝 Sign up for a free account</li>
-      <li>🚀 Solve the captcha and click "Roll"</li>
-      <li>💰 Collect hourly Bitcoin rewards</li>
+      <li>📝 Create a free account using your email</li>
+      <li>🚀 Solve the captcha and click “Roll” to win rewards</li>
+      <li>🎁 Participate in weekly jackpot draws for bigger prizes</li>
+      <li>💰 Withdraw instantly to your Bitcoin wallet</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.1s">
     <a href="http://cointiply.com/r/0DOBk" target="_blank">Cointiply</a>
-    <p>Earn up to 100 coins every hour</p>
+    <div class="earn-range">$0.10 – $50/hr</div>
     <ul>
-      <li>📝 Register with your email</li>
-      <li>🚀 Play games or watch videos</li>
-      <li>💰 Redeem coins for crypto</li>
+      <li>📝 Sign up with your email for free</li>
+      <li>🚀 Spin the faucet wheel or watch videos for rewards</li>
+      <li>🎁 Complete offers and daily bonuses</li>
+      <li>💰 Withdraw to Bitcoin or Dogecoin</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.2s">
     <a href="https://firefaucet.win/ref/686986" target="_blank">FireFaucet</a>
-    <p>Earn multiple cryptocurrencies</p>
+    <div class="earn-range">$0.05 – $25/hr</div>
     <ul>
-      <li>📝 Create an account</li>
-      <li>🚀 Complete auto/short tasks</li>
-      <li>💰 Withdraw to your wallet</li>
+      <li>📝 Register quickly using your email</li>
+      <li>🚀 Earn AF points from auto-claim or manual tasks</li>
+      <li>🎁 Exchange points for multiple cryptocurrencies</li>
+      <li>💰 Withdraw directly to your wallet</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.3s">
     <a href="https://faucetpay.io/?r=1671724" target="_blank">FaucetPay</a>
-    <p>Earn from multiple faucets</p>
+    <div class="earn-range">$0.05 – $10/hr</div>
     <ul>
-      <li>📝 Sign up for free</li>
-      <li>🚀 Visit partner faucets</li>
-      <li>💰 Store earnings in FaucetPay wallet</li>
+      <li>📝 Create a free FaucetPay account</li>
+      <li>🚀 Visit partner faucets to claim rewards</li>
+      <li>🎁 Take part in offers & microtasks for extra income</li>
+      <li>💰 Store crypto safely in FaucetPay wallet</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.4s">
     <a href="https://freecash.com/r/9bitcoin" target="_blank">FreeCash</a>
-    <p>Earn crypto by completing offers</p>
+    <div class="earn-range">$0.20 – $15/hr</div>
     <ul>
-      <li>📝 Register quickly</li>
-      <li>🚀 Complete surveys/offers</li>
-      <li>💰 Withdraw to PayPal or crypto</li>
+      <li>📝 Sign up and verify your email</li>
+      <li>🚀 Complete surveys & offers from advertisers</li>
+      <li>🎁 Claim daily bonuses to boost earnings</li>
+      <li>💰 Withdraw to PayPal or crypto instantly</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.5s">
     <a href="https://faucetcrypto.com/r/9014628" target="_blank">FaucetCrypto</a>
-    <p>Earn coins every 40 minutes</p>
+    <div class="earn-range">$0.05 – $8/hr</div>
     <ul>
-      <li>📝 Create account</li>
-      <li>🚀 Complete faucet claims/tasks</li>
-      <li>💰 Withdraw to wallet</li>
+      <li>📝 Create an account for free</li>
+      <li>🚀 Claim faucet rewards every 40 minutes</li>
+      <li>🎁 Complete small tasks for extra coins</li>
+      <li>💰 Withdraw to any supported wallet</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.6s">
     <a href="https://coinfaucet.io/?ref=998313" target="_blank">CoinFaucet</a>
-    <p>Earn free Dash every hour</p>
+    <div class="earn-range">$0.05 – $50/hr</div>
     <ul>
-      <li>📝 Sign up for free</li>
-      <li>🚀 Solve captcha and claim</li>
-      <li>💰 Get Dash instantly</li>
+      <li>📝 Sign up quickly using your email</li>
+      <li>🚀 Solve captcha and claim free Dash</li>
+      <li>🎁 Claim bonus rewards on lucky rolls</li>
+      <li>💰 Instant deposit to your Dash wallet</li>
     </ul>
   </div>
-  <div class="card">
+  <div class="card" style="animation-delay: 0.7s">
     <a href="https://nanogames.io/i-bonusrolls-n/" target="_blank">NanoGames</a>
-    <p>Earn faucet bonuses</p>
+    <div class="earn-range">$0.10 – $100/hr</div>
     <ul>
-      <li>📝 Sign up with email</li>
-      <li>🚀 Claim faucet rewards</li>
-      <li>💰 Play games to win more</li>
+      <li>📝 Create a free account</li>
+      <li>🚀 Claim faucet rewards regularly</li>
+      <li>🎁 Play games to multiply your earnings</li>
+      <li>💰 Withdraw directly to your crypto wallet</li>
     </ul>
   </div>
 </div>
